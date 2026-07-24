@@ -1,12 +1,12 @@
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
-import HomePage from "@/components/home/HomePage";
+import PrintingPage from "@/components/printing/PrintingPage";
 
-export default function Home() {
+export default function PrintingRoute() {
   return (
     <>
       <Navbar />
-      <HomePage />
+      <PrintingPage />
       <Footer />
     </>
   );

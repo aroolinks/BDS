@@ -1,22 +1,30 @@
 import type { Metadata } from "next";
-import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  variable: "--font-heading",
-  weight: ["600", "700", "800"],
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-body",
-});
-
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.berkshiredigitalstudio.co.uk"),
   title: "Berkshire Digital Studio",
   description:
-    "Web Design, Shopify Development, Mobile App Development and Printing Services.",
+    "Premium digital agency website design, Shopify development, mobile app development, printing services, and SEO support for ambitious brands.",
+  keywords: [
+    "Berkshire Digital Studio",
+    "Web Design",
+    "Shopify Development",
+    "Mobile App Development",
+    "Printing Services",
+    "SEO",
+  ],
+  openGraph: {
+    title: "Berkshire Digital Studio",
+    description:
+      "Premium digital experiences for ambitious brands.",
+    type: "website",
+    url: "https://www.berkshiredigitalstudio.co.uk",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -25,8 +33,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable} ${inter.variable}`}>
+    <html lang="en" className="scroll-smooth">
+      <body className="bg-[#FFFFFF] text-[#111111]">
         {children}
       </body>
     </html>

@@ -1,12 +1,12 @@
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
-import HomePage from "@/components/home/HomePage";
+import PortfolioShowcase from "@/components/portfolio/PortfolioShowcase";
 
-export default function Home() {
+export default function PortfolioPage() {
   return (
     <>
       <Navbar />
-      <HomePage />
+      <PortfolioShowcase />
       <Footer />
     </>
   );
