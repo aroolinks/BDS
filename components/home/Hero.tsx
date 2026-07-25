@@ -36,11 +36,11 @@ export default function Hero() {
               Berkshire Digital Studio
             </p>
             <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-[-0.07em] text-white md:text-7xl lg:text-8xl">
-              Digital work that gives ambitious businesses momentum.
+              {/* Digital work that gives ambitious businesses momentum. */}
+              Professional Web Design, Shopify & SEO That Grow Your Business
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/70 md:text-xl md:leading-9">
-              We create distinct brands, high-performing websites, and smarter digital systems that help you attract more customers and grow with confidence.
-            </p>
+We design fast, modern websites and eCommerce stores that help businesses attract more customers, improve Google rankings, and increase enquiries. From bespoke websites to Shopify stores and ongoing SEO, we build digital solutions that deliver measurable results.            </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button href="/contact">Book a Discovery Call</Button>
               <Button href="/portfolio" variant="secondary">

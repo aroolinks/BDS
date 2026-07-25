@@ -17,8 +17,9 @@ import Container from "@/components/ui/Container";
 
 const companyLinks = [
   { label: "Home", href: "/" },
+  { label: "Pricing", href: "/pricing" },
   { label: "Industries", href: "/industries" },
-  { label: "Portfolio", href: "/portfolio" },
+  // { label: "Portfolio", href: "/portfolio" }, // hidden for now
   { label: "Printing", href: "/printing" },
   { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/contact" },
@@ -82,10 +83,10 @@ export default function Footer() {
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.8fr_1fr_1fr]">
             <motion.div variants={reveal} transition={{ duration: 0.5 }} className="max-w-sm">
               <Link href="/" className="inline-block rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white" aria-label="Berkshire Digital Studio home">
-                <Image src="/logo.svg" alt="Berkshire Digital Studio" width={503} height={160} className="h-9 w-auto" />
+                <Image src="/logo.svg" alt="Berkshire Digital Studio" width={603} height={260} className="h-16 w-auto" />
               </Link>
               <p className="mt-4 text-sm leading-7 text-white/50">
-                Crafting premium websites, mobile apps, Shopify stores and digital experiences that help ambitious businesses grow.
+                Specialised in web design, mobile apps, Shopify stores and digital experiences that help ambitious businesses grow.
               </p>
             </motion.div>
 
@@ -165,7 +166,7 @@ export default function Footer() {
             <div>
               <p>© 2026 Berkshire Digital Studio. All rights reserved.</p>
               <p className="mt-1 text-xs text-white/35">
-                Web Design / Mobile Apps / Shopify Development / SEO & Growth / Printing & Creative
+                Web Design / Mobile Apps / Shopify Development / SEO & Growth / Printing / Graphic Design / Branding / Digital Marketing / AI & Automation
               </p>
             </div>
             <nav aria-label="Legal navigation">

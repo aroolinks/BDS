@@ -107,6 +107,7 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* Portfolio section hidden for now — re-enable when ready
       <section id="portfolio" className="relative isolate overflow-hidden border-y border-white/10 bg-[#111111]">
         <div className="glow-float pointer-events-none absolute -left-16 top-10 -z-10 h-72 w-72 rounded-full bg-[#ff5c00]/10 blur-3xl md:h-96 md:w-96" />
         <Container>
@@ -116,6 +117,7 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
+      */}
 
       <section id="process" className="relative isolate overflow-hidden bg-[#111111] text-white">
         <div className="glow-float-slow pointer-events-none absolute -right-20 bottom-0 -z-10 h-80 w-80 rounded-full bg-[#ff5c00]/10 blur-3xl md:h-[26rem] md:w-[26rem]" />

@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const logos = [
-  { label: "Elementor", image: "/elementor.png" },
-  { label: "Shopify", image: "/shopify.png" },
-  { label: "Webflow", image: "/webflow.svg" },
+  { label: "Elementor", image: "/elementor.svg" },
+  { label: "Shopify", image: "/shopify.svg" },
+  { label: "WordPress", image: "/wordpress.svg" },
 
 ];
 
