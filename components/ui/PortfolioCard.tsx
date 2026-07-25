@@ -1,3 +1,5 @@
+import TiltCard from "@/components/ui/TiltCard";
+
 type PortfolioCardProps = {
   title: string;
   category: string;
@@ -10,7 +12,7 @@ export default function PortfolioCard({
   accent,
 }: PortfolioCardProps) {
   return (
-    <article className="group overflow-hidden rounded-[28px] border border-white/10 bg-[#111111]">
+    <TiltCard className="group overflow-hidden rounded-[28px] border border-white/10 bg-[#111111] transition-colors duration-300 hover:border-[#ff5c00]/30">
       <div
         className="relative h-72 overflow-hidden bg-gradient-to-br p-6"
         style={{ backgroundImage: accent }}
@@ -29,6 +31,6 @@ export default function PortfolioCard({
           Premium digital direction, conversion-focused UX, and polished brand execution.
         </p>
       </div>
-    </article>
+    </TiltCard>
   );
 }

@@ -22,12 +22,12 @@ export default function Navbar() {
           aria-label="Berkshire Digital Studio home"
         >
           <Image
-            src="/logo-white.png"
+            src="/logo.svg"
             alt="Berkshire Digital Studio"
             width={1040}
             height={334}
             preload
-            className="h-[80px] w-auto md:h-[70px]"
+            className="h-[85px] w-auto md:h-[70px]"
           />
         </Link>
 
@@ -36,7 +36,7 @@ export default function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm text-white/70 transition-colors hover:text-white"
+              className="text-sm text-white/70 transition-colors hover:text-[#ff5c00]"
             >
               {link.label}
             </Link>

@@ -27,10 +27,11 @@ const printingServices = [
 
 export default function PrintingPage() {
   return (
-    <main className="pb-16 pt-28 md:pt-32 bg-[#111111] text-white">
+    <main className="relative isolate overflow-hidden pb-16 pt-44 md:pt-52 bg-[#111111] text-white">
+      <div className="glow-float pointer-events-none absolute -right-24 top-16 -z-10 h-80 w-80 rounded-full bg-[#ff5c00]/15 blur-3xl md:h-[28rem] md:w-[28rem]" />
       <Container>
         <div className="max-w-4xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-white/50">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#ff5c00]">
             Printing Services
           </p>
           <h1 className="text-5xl font-semibold tracking-[-0.06em] text-white md:text-7xl">
@@ -51,9 +52,9 @@ export default function PrintingPage() {
           {printingServices.map((service) => (
             <article
               key={service.title}
-              className="rounded-[28px] border border-white/10 bg-[#111111] p-6 shadow-[0_12px_35px_rgba(255,255,255,0.04)]"
+              className="rounded-[28px] border border-white/10 bg-[#111111] p-6 shadow-[0_12px_35px_rgba(0,0,0,0.25)] transition-colors duration-300 hover:border-[#ff5c00]/30"
             >
-              <span className="rounded-full bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/60">
+              <span className="rounded-full bg-[#ff5c00]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-[#ff5c00]">
                 Print Solution
               </span>
               <h2 className="mt-4 text-2xl font-semibold text-white">

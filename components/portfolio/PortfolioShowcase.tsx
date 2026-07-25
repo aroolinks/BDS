@@ -68,7 +68,8 @@ export default function PortfolioShowcase() {
   }, [activeFilter]);
 
   return (
-    <section className="py-20 md:py-24 bg-[#111111] text-white">
+    <section className="relative isolate overflow-hidden pb-20 pt-44 md:pb-24 md:pt-52 bg-[#111111] text-white">
+      <div className="glow-float pointer-events-none absolute -right-24 top-0 -z-10 h-80 w-80 rounded-full bg-[#ff5c00]/15 blur-3xl md:h-[28rem] md:w-[28rem]" />
       <Container>
         <SectionHeading
           eyebrow="Portfolio"
@@ -87,8 +88,8 @@ export default function PortfolioShowcase() {
                 onClick={() => setActiveFilter(option)}
                 className={`rounded-full border px-4 py-2 text-sm transition-all duration-300 ${
                   isActive
-                    ? "border-white bg-white text-[#111111]"
-                    : "border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:text-white"
+                    ? "border-[#ff5c00] bg-[#ff5c00] text-[#111111]"
+                    : "border-white/10 bg-white/5 text-white/70 hover:border-[#ff5c00]/40 hover:text-white"
                 }`}
               >
                 {option}

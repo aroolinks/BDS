@@ -137,8 +137,8 @@ const fadeUp = {
 export default function ServicesPage() {
   return (
     <main className="overflow-hidden pt-24">
-      <section className="relative pb-20 pt-20 md:pb-28 md:pt-28 bg-[#111111] text-white">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_82%_12%,rgba(255,255,255,0.08),transparent_24rem)]" />
+      <section className="relative isolate overflow-hidden pb-20 pt-20 md:pb-28 md:pt-28 bg-[#111111] text-white">
+        <div className="glow-float pointer-events-none absolute -right-24 top-0 -z-10 h-80 w-80 rounded-full bg-[#ff5c00]/15 blur-3xl md:h-[32rem] md:w-[32rem]" />
         <Container>
           <motion.div
             initial="hidden"
@@ -147,7 +147,7 @@ export default function ServicesPage() {
             transition={{ duration: 0.65, ease: "easeOut" }}
             className="max-w-5xl"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/50">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#ff5c00]">
               Services
             </p>
             <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-[-0.065em] text-white md:text-7xl lg:text-8xl">
@@ -190,13 +190,13 @@ export default function ServicesPage() {
                     variants={fadeUp}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                     whileHover={{ y: -6 }}
-                    className={`group flex flex-col rounded-[30px] border border-white/10 bg-[#111111] p-7 shadow-[0_16px_48px_rgba(255,255,255,0.03)] transition-shadow duration-300 hover:border-white/20 hover:shadow-[0_24px_58px_rgba(255,255,255,0.05)] md:p-9 ${index === services.length - 1 ? "lg:col-span-2" : ""}`}
+                    className={`group flex flex-col rounded-[30px] border border-white/10 bg-[#111111] p-7 shadow-[0_16px_48px_rgba(0,0,0,0.25)] transition-all duration-300 hover:border-[#ff5c00]/30 hover:shadow-[0_20px_60px_rgba(255,92,0,0.1)] md:p-9 ${index === services.length - 1 ? "lg:col-span-2" : ""}`}
                   >
                     <div className="flex items-start justify-between gap-6">
-                      <div className="rounded-2xl bg-white/10 p-3.5 text-white">
+                      <div className="rounded-2xl bg-white/10 p-3.5 text-white transition-colors duration-300 group-hover:bg-[#ff5c00]/15 group-hover:text-[#ff5c00]">
                         <Icon className="h-6 w-6" strokeWidth={1.7} />
                       </div>
-                      <span className="text-xs font-semibold tracking-[0.2em] text-white/50">
+                      <span className="text-xs font-semibold tracking-[0.2em] text-[#ff5c00]">
                         0{index + 1}
                       </span>
                     </div>
@@ -214,7 +214,7 @@ export default function ServicesPage() {
                     </ul>
                     <Link
                       href="/contact"
-                      className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-white transition-transform duration-300 group-hover:translate-x-1"
+                      className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-white transition-all duration-300 group-hover:translate-x-1 group-hover:text-[#ff5c00]"
                     >
                       Explore Service <ArrowRight className="h-4 w-4" />
                     </Link>
@@ -226,7 +226,8 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      <section aria-labelledby="why-heading" className="bg-[#111111]">
+      <section aria-labelledby="why-heading" className="relative isolate overflow-hidden bg-[#111111]">
+        <div className="glow-float-slow pointer-events-none absolute -left-20 bottom-0 -z-10 h-72 w-72 rounded-full bg-[#ff5c00]/10 blur-3xl md:h-96 md:w-96" />
         <Container>
           <div className="grid gap-12 py-20 md:py-28 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20">
             <SectionHeading
@@ -264,17 +265,18 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      <section className="bg-[#111111] text-white" aria-labelledby="process-heading">
+      <section className="relative isolate overflow-hidden bg-[#111111] text-white" aria-labelledby="process-heading">
+        <div className="glow-float pointer-events-none absolute -right-20 top-10 -z-10 h-80 w-80 rounded-full bg-[#ff5c00]/10 blur-3xl md:h-[26rem] md:w-[26rem]" />
         <Container>
           <div className="py-20 md:py-28">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/55">Our process</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#ff5c00]">Our process</p>
             <h2 id="process-heading" className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.055em] md:text-6xl">
               Clear from first conversation to long-term growth.
             </h2>
             <div className="mt-12 grid gap-px overflow-hidden rounded-[28px] border border-white/15 bg-white/15 md:grid-cols-5">
               {process.map(([number, title, text]) => (
                 <div key={title} className="bg-[#111111] p-6 md:min-h-64 md:p-7">
-                  <p className="text-xs font-semibold tracking-[0.25em] text-white/50">{number}</p>
+                  <p className="text-xs font-semibold tracking-[0.25em] text-[#ff5c00]">{number}</p>
                   <h3 className="mt-10 text-2xl font-semibold tracking-[-0.04em]">{title}</h3>
                   <p className="mt-3 text-sm leading-6 text-white/65">{text}</p>
                 </div>
@@ -297,7 +299,7 @@ export default function ServicesPage() {
                 <details key={faq.question} className="group py-5" open={index === 0}>
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold tracking-[-0.02em] text-white marker:content-none">
                     {faq.question}
-                    <span className="text-2xl font-normal text-white/60 transition-transform duration-300 group-open:rotate-45">+</span>
+                    <span className="text-2xl font-normal text-white/60 transition-all duration-300 group-open:rotate-45 group-open:text-[#ff5c00]">+</span>
                   </summary>
                   <p className="max-w-2xl pb-1 pt-3 leading-7 text-white/60">{faq.answer}</p>
                 </details>
@@ -314,9 +316,10 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
-            className="rounded-[32px] bg-[#111111] border border-white/10 px-6 py-12 text-center md:px-12 md:py-16"
+            className="relative isolate overflow-hidden rounded-[32px] border border-white/10 bg-[#111111] px-6 py-12 text-center shadow-[0_0_120px_-40px_rgba(255,92,0,0.35)] md:px-12 md:py-16"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/50">Let’s make progress</p>
+            <div className="absolute left-1/2 top-0 -z-10 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff5c00]/10 blur-3xl" />
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#ff5c00]">Let’s make progress</p>
             <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.055em] text-white md:text-6xl">
               Ready to turn your next idea into real momentum?
             </h2>

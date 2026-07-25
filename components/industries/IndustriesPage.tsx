@@ -136,10 +136,10 @@ const fadeUp = {
 export default function IndustriesPage() {
   return (
     <main className="overflow-hidden pt-24">
-      <section className="relative flex min-h-[62vh] items-center py-20 md:py-28 bg-[#111111] text-white">
+      <section className="relative isolate flex min-h-[62vh] items-center py-20 md:py-28 bg-[#111111] text-white">
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute -right-24 top-6 h-72 w-72 rounded-full bg-white/5 blur-3xl md:h-[32rem] md:w-[32rem]" />
-          <div className="absolute bottom-0 left-[14%] h-44 w-44 rotate-45 rounded-[38px] border border-white/10 md:h-64 md:w-64" />
+          <div className="glow-float absolute -right-24 top-6 h-72 w-72 rounded-full bg-[#ff5c00]/15 blur-3xl md:h-[32rem] md:w-[32rem]" />
+          <div className="glow-float-slow absolute bottom-0 left-[14%] h-44 w-44 rotate-45 rounded-[38px] border border-[#ff5c00]/20 md:h-64 md:w-64" />
         </div>
         <Container>
           <motion.div
@@ -149,7 +149,7 @@ export default function IndustriesPage() {
             transition={{ duration: 0.65, ease: "easeOut" }}
             className="max-w-4xl"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/50">Industries</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#ff5c00]">Industries</p>
             <h1 className="mt-5 text-5xl font-semibold tracking-[-0.065em] text-white md:text-7xl lg:text-8xl">
               Choose Your Industry
             </h1>
@@ -164,7 +164,8 @@ export default function IndustriesPage() {
         </Container>
       </section>
 
-      <section id="industry-grid" className="border-y border-white/10 bg-[#111111]" aria-labelledby="industries-heading">
+      <section id="industry-grid" className="relative isolate overflow-hidden border-y border-white/10 bg-[#111111]" aria-labelledby="industries-heading">
+        <div className="glow-float pointer-events-none absolute -left-20 top-0 -z-10 h-72 w-72 rounded-full bg-[#ff5c00]/10 blur-3xl md:h-96 md:w-96" />
         <Container>
           <div className="py-20 md:py-28">
             <SectionHeading
@@ -225,10 +226,11 @@ export default function IndustriesPage() {
         </Container>
       </section>
 
-      <section className="bg-[#111111] text-white" aria-labelledby="process-heading">
+      <section className="relative isolate overflow-hidden bg-[#111111] text-white" aria-labelledby="process-heading">
+        <div className="glow-float-slow pointer-events-none absolute -right-20 bottom-0 -z-10 h-80 w-80 rounded-full bg-[#ff5c00]/10 blur-3xl md:h-[26rem] md:w-[26rem]" />
         <Container>
           <div className="py-20 md:py-28">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/55">Our process</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#ff5c00]">Our process</p>
             <h2 id="process-heading" className="mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.055em] md:text-6xl">
               A clear path from sector insight to lasting growth.
             </h2>
@@ -246,7 +248,7 @@ export default function IndustriesPage() {
                   transition={{ duration: 0.45 }}
                   className="relative min-h-48 bg-[#111111] p-6 md:p-7"
                 >
-                  <span className="text-xs font-semibold tracking-[0.25em] text-white/45">0{index + 1}</span>
+                  <span className="text-xs font-semibold tracking-[0.25em] text-[#ff5c00]">0{index + 1}</span>
                   <h3 className="mt-10 text-2xl font-semibold tracking-[-0.04em]">{step}</h3>
                   {index < steps.length - 1 && <span className="absolute bottom-7 right-0 hidden h-px w-5 translate-x-1/2 bg-white/35 md:block" />}
                 </motion.li>
@@ -263,9 +265,10 @@ export default function IndustriesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.6 }}
-            className="rounded-[34px] bg-[#111111] border border-white/10 px-6 py-12 text-center md:px-12 md:py-18"
+            className="relative isolate overflow-hidden rounded-[34px] border border-white/10 bg-[#111111] px-6 py-12 text-center shadow-[0_0_120px_-40px_rgba(255,92,0,0.35)] md:px-12 md:py-18"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/50">Your next chapter</p>
+            <div className="absolute left-1/2 top-0 -z-10 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff5c00]/10 blur-3xl" />
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#ff5c00]">Your next chapter</p>
             <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.055em] text-white md:text-6xl">
               Ready to Grow Your Business?
             </h2>

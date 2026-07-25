@@ -1,12 +1,20 @@
 import type { MetadataRoute } from "next";
 
+const routes = [
+  { path: "", priority: 1 },
+  { path: "/services", priority: 0.8 },
+  { path: "/industries", priority: 0.8 },
+  { path: "/portfolio", priority: 0.8 },
+  { path: "/printing", priority: 0.8 },
+  { path: "/contact", priority: 0.7 },
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: "https://www.berkshiredigitalstudio.co.uk",
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-  ];
+  const lastModified = new Date();
+  return routes.map(({ path, priority }) => ({
+    url: `https://www.berkshiredigitalstudio.co.uk${path}`,
+    lastModified,
+    changeFrequency: "weekly",
+    priority,
+  }));
 }
