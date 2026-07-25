@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
+  Computer,
   Globe,
   LayoutGrid,
   Palette,
@@ -30,6 +31,7 @@ const services = [
   { icon: ShoppingBag, title: "Shopify Development", description: "High-performing storefronts that make every product and purchase feel effortless." },
   { icon: LayoutGrid, title: "Print & Creative", description: "Memorable brand collateral that carries your digital presence into the real world." },
   { icon: Search, title: "SEO & Growth", description: "Technical and strategic support that helps ambitious brands become easier to find." },
+  { icon: Computer, title: "Online Ordering System", description: "Seamless online ordering experiences that drive sales and improve customer satisfaction." },
 ];
 
 const reasons = [

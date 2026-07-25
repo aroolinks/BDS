@@ -3,9 +3,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.berkshiredigitalstudio.co.uk"),
-  title: "Berkshire Digital Studio",
+  title: "Website design & development Studio Berkshire",
   description:
-    "Premium digital agency website design, Shopify development, mobile app development, printing services, and SEO support for ambitious brands.",
+    "Affordable website design and development in Berkshire. We build fast, modern, SEO-friendly websites and Shopify stores that help your business grow.",
   keywords: [
     "Berkshire Digital Studio",
     "Web Design",
@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     "SEO",
   ],
   openGraph: {
-    title: "Berkshire Digital Studio",
+    title: "Website design & development Studio Berkshire",
     description:
-      "Premium digital experiences for ambitious brands.",
+      "Affordable website design and development in Berkshire. We build fast, modern, SEO-friendly websites and Shopify stores that help your business grow.",
     type: "website",
     url: "https://www.berkshiredigitalstudio.co.uk",
   },

@@ -1,9 +1,12 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 
 const links = [
-  { label: "Home", href: "/#top" },
+  { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "Pricing", href: "/pricing" },
   { label: "Industries", href: "/industries" },
@@ -14,8 +17,23 @@ const links = [
 ];
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#111111]/95 backdrop-blur-xl">
+    <header
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? "border-b border-white/10 bg-[#111111]/95 backdrop-blur-xl"
+          : "border-b border-transparent bg-transparent"
+      }`}
+    >
       <div className="mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-5 md:px-8">
         <Link
           href="https://www.berkshiredigitalstudio.co.uk/"

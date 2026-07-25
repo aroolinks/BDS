@@ -43,8 +43,11 @@ export default function Hero() {
 We design fast, modern websites and eCommerce stores that help businesses attract more customers, improve Google rankings, and increase enquiries. From bespoke websites to Shopify stores and ongoing SEO, we build digital solutions that deliver measurable results.            </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button href="/contact">Book a Discovery Call</Button>
-              <Button href="/portfolio" variant="secondary">
-                View Recent Work
+              {/* <Button href="/portfolio" variant="secondary">
+                View Recent Workm
+              </Button> */}
+              <Button href="/pricing" variant="secondary">
+                Our Pricing
               </Button>
             </div>
           </motion.div>
