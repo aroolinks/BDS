@@ -137,8 +137,8 @@ const fadeUp = {
 export default function ServicesPage() {
   return (
     <main className="overflow-hidden pt-24">
-      <section className="relative pb-20 pt-20 md:pb-28 md:pt-28">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_82%_12%,rgba(17,17,17,0.09),transparent_24rem)]" />
+      <section className="relative pb-20 pt-20 md:pb-28 md:pt-28 bg-[#111111] text-white">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_82%_12%,rgba(255,255,255,0.08),transparent_24rem)]" />
         <Container>
           <motion.div
             initial="hidden"
@@ -147,13 +147,13 @@ export default function ServicesPage() {
             transition={{ duration: 0.65, ease: "easeOut" }}
             className="max-w-5xl"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#666666]">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/50">
               Services
             </p>
-            <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-[-0.065em] text-[#111111] md:text-7xl lg:text-8xl">
+            <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-[-0.065em] text-white md:text-7xl lg:text-8xl">
               Digital Services Designed to Help Your Business Grow
             </h1>
-            <p className="mt-7 max-w-3xl text-lg leading-8 text-[#666666] md:text-xl md:leading-9">
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-white/60 md:text-xl md:leading-9">
               We build high-performing websites, eCommerce stores, mobile apps, marketing strategies, and business systems that help ambitious businesses attract more customers and scale with confidence.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -166,7 +166,7 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      <section className="border-y border-[#E5E5E5] bg-[#F8F8F8]" aria-labelledby="services-heading">
+      <section className="border-y border-white/10 bg-[#111111]" aria-labelledby="services-heading">
         <Container>
           <div className="py-20 md:py-28">
             <SectionHeading
@@ -190,23 +190,23 @@ export default function ServicesPage() {
                     variants={fadeUp}
                     transition={{ duration: 0.5, ease: "easeOut" }}
                     whileHover={{ y: -6 }}
-                    className={`group flex flex-col rounded-[30px] border border-[#E5E5E5] bg-white p-7 shadow-[0_16px_48px_rgba(17,17,17,0.03)] transition-shadow duration-300 hover:border-[#111111] hover:shadow-[0_24px_58px_rgba(17,17,17,0.09)] md:p-9 ${index === services.length - 1 ? "lg:col-span-2" : ""}`}
+                    className={`group flex flex-col rounded-[30px] border border-white/10 bg-[#111111] p-7 shadow-[0_16px_48px_rgba(255,255,255,0.03)] transition-shadow duration-300 hover:border-white/20 hover:shadow-[0_24px_58px_rgba(255,255,255,0.05)] md:p-9 ${index === services.length - 1 ? "lg:col-span-2" : ""}`}
                   >
                     <div className="flex items-start justify-between gap-6">
-                      <div className="rounded-2xl bg-[#111111] p-3.5 text-white">
+                      <div className="rounded-2xl bg-white/10 p-3.5 text-white">
                         <Icon className="h-6 w-6" strokeWidth={1.7} />
                       </div>
-                      <span className="text-xs font-semibold tracking-[0.2em] text-[#666666]">
+                      <span className="text-xs font-semibold tracking-[0.2em] text-white/50">
                         0{index + 1}
                       </span>
                     </div>
-                    <h2 className="mt-8 text-2xl font-semibold tracking-[-0.04em] text-[#111111] md:text-3xl">
+                    <h2 className="mt-8 text-2xl font-semibold tracking-[-0.04em] text-white md:text-3xl">
                       {service.title}
                     </h2>
-                    <p className="mt-3 max-w-xl leading-7 text-[#666666]">{service.description}</p>
+                    <p className="mt-3 max-w-xl leading-7 text-white/60">{service.description}</p>
                     <ul className="mt-7 grid gap-3 sm:grid-cols-2" aria-label={`${service.title} services`}>
                       {service.items.map((item) => (
-                        <li key={item} className="flex items-start gap-2.5 text-sm leading-6 text-[#111111]">
+                        <li key={item} className="flex items-start gap-2.5 text-sm leading-6 text-white">
                           <Check className="mt-0.5 h-4 w-4 shrink-0" strokeWidth={2} />
                           {item}
                         </li>
@@ -214,7 +214,7 @@ export default function ServicesPage() {
                     </ul>
                     <Link
                       href="/contact"
-                      className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-[#111111] transition-transform duration-300 group-hover:translate-x-1"
+                      className="mt-8 inline-flex w-fit items-center gap-2 text-sm font-semibold text-white transition-transform duration-300 group-hover:translate-x-1"
                     >
                       Explore Service <ArrowRight className="h-4 w-4" />
                     </Link>
@@ -226,7 +226,7 @@ export default function ServicesPage() {
         </Container>
       </section>
 
-      <section aria-labelledby="why-heading">
+      <section aria-labelledby="why-heading" className="bg-[#111111]">
         <Container>
           <div className="grid gap-12 py-20 md:py-28 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20">
             <SectionHeading
@@ -249,12 +249,12 @@ export default function ServicesPage() {
                     key={reason.title}
                     variants={fadeUp}
                     transition={{ duration: 0.5 }}
-                    className="flex gap-5 rounded-[24px] border border-[#E5E5E5] p-6 md:p-7"
+                    className="flex gap-5 rounded-[24px] border border-white/10 bg-[#111111] p-6 md:p-7"
                   >
-                    <Icon className="mt-1 h-6 w-6 shrink-0 text-[#111111]" strokeWidth={1.6} />
+                    <Icon className="mt-1 h-6 w-6 shrink-0 text-white" strokeWidth={1.6} />
                     <div>
-                      <h3 className="text-xl font-semibold tracking-[-0.03em] text-[#111111]">{reason.title}</h3>
-                      <p className="mt-2 leading-7 text-[#666666]">{reason.text}</p>
+                      <h3 className="text-xl font-semibold tracking-[-0.03em] text-white">{reason.title}</h3>
+                      <p className="mt-2 leading-7 text-white/60">{reason.text}</p>
                     </div>
                   </motion.div>
                 );
@@ -292,14 +292,14 @@ export default function ServicesPage() {
               title="A little more clarity before we begin."
               description="If you have a specific question, we would be happy to talk it through."
             />
-            <div id="faq-heading" className="divide-y divide-[#E5E5E5] border-y border-[#E5E5E5]">
+            <div id="faq-heading" className="divide-y divide-white/10 border-y border-white/10">
               {faqs.map((faq, index) => (
                 <details key={faq.question} className="group py-5" open={index === 0}>
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold tracking-[-0.02em] text-[#111111] marker:content-none">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold tracking-[-0.02em] text-white marker:content-none">
                     {faq.question}
-                    <span className="text-2xl font-normal text-[#666666] transition-transform duration-300 group-open:rotate-45">+</span>
+                    <span className="text-2xl font-normal text-white/60 transition-transform duration-300 group-open:rotate-45">+</span>
                   </summary>
-                  <p className="max-w-2xl pb-1 pt-3 leading-7 text-[#666666]">{faq.answer}</p>
+                  <p className="max-w-2xl pb-1 pt-3 leading-7 text-white/60">{faq.answer}</p>
                 </details>
               ))}
             </div>
@@ -314,13 +314,13 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6 }}
-            className="rounded-[32px] bg-[#F8F8F8] px-6 py-12 text-center md:px-12 md:py-16"
+            className="rounded-[32px] bg-[#111111] border border-white/10 px-6 py-12 text-center md:px-12 md:py-16"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#666666]">Let’s make progress</p>
-            <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.055em] text-[#111111] md:text-6xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/50">Let’s make progress</p>
+            <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.055em] text-white md:text-6xl">
               Ready to turn your next idea into real momentum?
             </h2>
-            <p className="mx-auto mt-5 max-w-2xl leading-7 text-[#666666]">
+            <p className="mx-auto mt-5 max-w-2xl leading-7 text-white/60">
               Tell us where you want to go. We’ll help you find the clearest, most valuable way to get there.
             </p>
             <div className="mt-8 flex justify-center">

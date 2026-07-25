@@ -22,6 +22,7 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import ServiceCard from "@/components/ui/ServiceCard";
 import Stats from "@/components/ui/Stats";
 import TestimonialCard from "@/components/ui/TestimonialCard";
+import ImageScroll from "@/components/home/ImageScroll";
 
 const services = [
   { icon: Palette, title: "Web Design", description: "Distinctive, conversion-led websites that make the right first impression." },
@@ -77,21 +78,16 @@ export default function HomePage() {
     <main id="top" className="overflow-hidden">
       <Hero />
 
-      <section className="border-y border-[#E5E5E5] bg-[#F8F8F8] py-8 md:py-10">
-        <Container>
-          <div className="grid gap-4 text-center text-xs font-semibold uppercase tracking-[0.24em] text-[#666666] sm:grid-cols-2 md:grid-cols-5 md:text-left">
-            <span className="text-[#111111]">Trusted by ambitious teams</span>
-            <span>Northline</span><span>Aurelia</span><span>Vanta</span><span>Reading Growth</span>
-          </div>
-        </Container>
-      </section>
+      <ImageScroll />
 
-      <section id="services" className="scroll-mt-24 bg-[#F8F8F8]">
+  
+
+      <section id="services" className="scroll-mt-24 bg-[#111111]">
         <Container>
-          <div className="py-20 md:py-28">
+          <div className="py-10 md:py-28">
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <SectionHeading eyebrow="Services" title="Everything you need to create meaningful digital momentum." description="Bring us one challenge or a wider ambition. We will help you choose the right path forward." />
-              <Link href="/services" className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#111111] transition-transform hover:translate-x-1">Explore services <ArrowRight className="h-4 w-4" /></Link>
+              <Link href="/services" className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-white transition-transform hover:text-white/80 hover:translate-x-1">Explore services <ArrowRight className="h-4 w-4" /></Link>
             </div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.12 }} transition={{ staggerChildren: 0.08 }} className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {services.map((service) => <motion.div key={service.title} variants={fadeUp} transition={{ duration: 0.5 }}><ServiceCard {...service} /></motion.div>)}
@@ -105,16 +101,16 @@ export default function HomePage() {
           <div className="grid gap-12 py-20 md:py-28 lg:grid-cols-[0.82fr_1.18fr] lg:gap-20">
             <SectionHeading eyebrow="Why Berkshire Digital Studio" title="A more considered way to move your business forward." description="We combine clear thinking, excellent craft, and a level of care that stays visible in the finished work." />
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.18 }} transition={{ staggerChildren: 0.1 }} className="grid gap-4 md:grid-cols-2">
-              {reasons.map((reason) => { const Icon = reason.icon; return <motion.article key={reason.title} variants={fadeUp} transition={{ duration: 0.5 }} className="rounded-[25px] border border-[#E5E5E5] p-6 shadow-[0_12px_36px_rgba(17,17,17,0.025)]"><Icon className="h-6 w-6" strokeWidth={1.6} /><h2 className="mt-7 text-xl font-semibold tracking-[-0.035em] text-[#111111]">{reason.title}</h2><p className="mt-3 text-sm leading-6 text-[#666666]">{reason.text}</p></motion.article>; })}
+              {reasons.map((reason) => { const Icon = reason.icon; return <motion.article key={reason.title} variants={fadeUp} transition={{ duration: 0.5 }} className="rounded-[25px] border border-white/10 bg-[#111111] p-6 shadow-[0_12px_36px_rgba(255,255,255,0.04)]"><Icon className="h-6 w-6 text-white" strokeWidth={1.6} /><h2 className="mt-7 text-xl font-semibold tracking-[-0.035em] text-white">{reason.title}</h2><p className="mt-3 text-sm leading-6 text-white/60">{reason.text}</p></motion.article>; })}
             </motion.div>
           </div>
         </Container>
       </section>
 
-      <section id="portfolio" className="border-y border-[#E5E5E5] bg-[#F8F8F8]">
+      <section id="portfolio" className="border-y border-white/10 bg-[#111111]">
         <Container>
           <div className="py-20 md:py-28">
-            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between"><SectionHeading eyebrow="Selected work" title="Experiences designed to be remembered." description="A glimpse at how strategic direction and refined execution come together." /><Link href="/portfolio" className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-[#111111] transition-transform hover:translate-x-1">View portfolio <ArrowRight className="h-4 w-4" /></Link></div>
+            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between"><SectionHeading eyebrow="Selected work" title="Experiences designed to be remembered." description="A glimpse at how strategic direction and refined execution come together." /><Link href="/portfolio" className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-white transition-transform hover:text-white/80 hover:translate-x-1">View portfolio <ArrowRight className="h-4 w-4" /></Link></div>
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.15 }} transition={{ staggerChildren: 0.1 }} className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">{portfolio.map((item) => <motion.div key={item.title} variants={fadeUp} transition={{ duration: 0.5 }}><PortfolioCard {...item} /></motion.div>)}</motion.div>
           </div>
         </Container>
@@ -132,15 +128,15 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="bg-[#F8F8F8]">
+      <section className="bg-[#111111]">
         <Container>
           <div className="py-20 md:py-28"><SectionHeading eyebrow="Client perspective" title="What clients remember most." description="A premium experience is not only how it looks, but how it feels to work with the team behind it." /><div className="mt-12 grid gap-4 lg:grid-cols-3">{testimonials.map((item) => <TestimonialCard key={item.name} {...item} />)}</div></div>
         </Container>
       </section>
 
-      <section id="faq" className="scroll-mt-24">
+      <section id="faq" className="scroll-mt-24 bg-[#111111]">
         <Container>
-          <div className="grid gap-10 py-20 md:py-28 lg:grid-cols-[0.78fr_1.22fr] lg:gap-20"><SectionHeading eyebrow="FAQ" title="Common questions, answered clearly." description="If you have a specific question, we would be happy to talk it through." /><div className="divide-y divide-[#E5E5E5] border-y border-[#E5E5E5]">{faqs.map((faq, index) => <details key={faq.question} open={index === 0} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold tracking-[-0.02em] text-[#111111]">{faq.question}<span className="text-2xl font-normal text-[#666666] transition-transform duration-300 group-open:rotate-45">+</span></summary><p className="max-w-2xl pb-1 pt-3 leading-7 text-[#666666]">{faq.answer}</p></details>)}</div></div>
+          <div className="grid gap-10 py-20 md:py-28 lg:grid-cols-[0.78fr_1.22fr] lg:gap-20"><SectionHeading eyebrow="FAQ" title="Common questions, answered clearly." description="If you have a specific question, we would be happy to talk it through." /><div className="divide-y divide-white/10 border-y border-white/10">{faqs.map((faq, index) => <details key={faq.question} open={index === 0} className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold tracking-[-0.02em] text-white">{faq.question}<span className="text-2xl font-normal text-white/60 transition-transform duration-300 group-open:rotate-45">+</span></summary><p className="max-w-2xl pb-1 pt-3 leading-7 text-white/60">{faq.answer}</p></details>)}</div></div>
         </Container>
       </section>
 

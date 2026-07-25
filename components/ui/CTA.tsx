@@ -3,7 +3,7 @@ import Button from "@/components/ui/Button";
 export default function CTA() {
   return (
     <section className="py-0">
-      <div className="rounded-[32px] bg-[#0A0A0A] px-6 py-14 text-white md:px-10 md:py-16">
+      <div className="rounded-[32px] bg-[#111111] px-6 py-14 text-white md:px-10 md:py-16">
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="max-w-2xl">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.32em] text-white/60">

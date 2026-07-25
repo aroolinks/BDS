@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, MapPin, MessageSquare, Phone } from "lucide-react";
+import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 
 const contactDetails = [
@@ -25,33 +26,25 @@ const contactDetails = [
 
 export default function ContactPage() {
   return (
-    <main className="pb-16 pt-28 md:pt-32">
+    <main className="pb-16 pt-28 md:pt-32 bg-[#111111] text-white">
       <Container>
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-          <div className="rounded-[32px] border border-[#E5E5E5] bg-[#F8F8F8] p-6 md:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#666666]">
+          <div className="rounded-[32px] border border-white/10 bg-[#111111] p-6 md:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/50">
               Contact us
             </p>
-            <h1 className="mt-4 max-w-2xl text-4xl font-semibold tracking-[-0.06em] text-[#111111] md:text-6xl">
+            <h1 className="mt-4 max-w-2xl text-4xl font-semibold tracking-[-0.06em] text-white md:text-6xl">
               Let’s build the kind of digital presence your business deserves.
             </h1>
-            <p className="mt-5 max-w-xl text-lg leading-8 text-[#666666]">
+            <p className="mt-5 max-w-xl text-lg leading-8 text-white/60">
               Whether you need a website, Shopify storefront, mobile app, brand refresh, or print collateral, we’re here to help shape a polished solution that feels premium and performs with purpose.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="mailto:info@berkshiredigitalstudio.co.uk"
-                className="inline-flex items-center justify-center rounded-full bg-[#111111] px-6 py-3 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
-              >
-                Email Us
-              </Link>
-              <Link
-                href="/portfolio"
-                className="inline-flex items-center justify-center rounded-full border border-[#E5E5E5] bg-white px-6 py-3 text-sm font-semibold text-[#111111] transition-transform duration-300 hover:-translate-y-0.5"
-              >
+              <Button href="mailto:info@berkshiredigitalstudio.co.uk">Email Us</Button>
+              <Button href="/portfolio" variant="secondary">
                 View Portfolio
-              </Link>
+              </Button>
             </div>
           </div>
 
@@ -64,16 +57,16 @@ export default function ContactPage() {
                   href={item.href}
                   target={item.label === "Address" ? "_blank" : undefined}
                   rel={item.label === "Address" ? "noreferrer" : undefined}
-                  className="group flex items-start gap-4 rounded-[28px] border border-[#E5E5E5] bg-white p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#111111]"
+                  className="group flex items-start gap-4 rounded-[28px] border border-white/10 bg-[#111111] p-6 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/20"
                 >
-                  <div className="mt-1 rounded-full bg-[#F8F8F8] p-3 text-[#111111]">
+                  <div className="mt-1 rounded-full bg-white/5 p-3 text-white">
                     <Icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <div className="text-xs font-semibold uppercase tracking-[0.3em] text-[#666666]">
+                    <div className="text-xs font-semibold uppercase tracking-[0.3em] text-white/50">
                       {item.label}
                     </div>
-                    <div className="mt-2 text-lg font-medium text-[#111111] group-hover:text-[#111111]">
+                    <div className="mt-2 text-lg font-medium text-white">
                       {item.value}
                     </div>
                   </div>
@@ -83,67 +76,67 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <section className="mt-8 rounded-[32px] border border-[#E5E5E5] bg-[#F8F8F8] p-6 md:p-8">
+        <section className="mt-8 rounded-[32px] border border-white/10 bg-[#111111] p-6 md:p-8">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#666666]">
+              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/50">
                 Quick enquiry
               </p>
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-[#111111] md:text-4xl">
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white md:text-4xl">
                 Tell us what you need.
               </h2>
-              <p className="mt-4 max-w-md text-base leading-7 text-[#666666]">
+              <p className="mt-4 max-w-md text-base leading-7 text-white/60">
                 Share a few details and we’ll get back to you with the best next step for your project.
               </p>
             </div>
 
             <form className="grid gap-4">
               <div className="grid gap-4 md:grid-cols-2">
-                <label className="grid gap-2 text-sm text-[#666666]">
+                <label className="grid gap-2 text-sm text-white/60">
                   Name
                   <input
                     type="text"
                     placeholder="Your name"
-                    className="rounded-2xl border border-[#E5E5E5] bg-white px-4 py-3 text-[#111111] outline-none transition-colors focus:border-[#111111]"
+                    className="rounded-2xl border border-white/10 bg-[#111111] px-4 py-3 text-white placeholder:text-white/40 outline-none transition-colors focus:border-white/20"
                   />
                 </label>
-                <label className="grid gap-2 text-sm text-[#666666]">
+                <label className="grid gap-2 text-sm text-white/60">
                   Email
                   <input
                     type="email"
                     placeholder="you@example.com"
-                    className="rounded-2xl border border-[#E5E5E5] bg-white px-4 py-3 text-[#111111] outline-none transition-colors focus:border-[#111111]"
+                    className="rounded-2xl border border-white/10 bg-[#111111] px-4 py-3 text-white placeholder:text-white/40 outline-none transition-colors focus:border-white/20"
                   />
                 </label>
               </div>
 
-              <label className="grid gap-2 text-sm text-[#666666]">
+              <label className="grid gap-2 text-sm text-white/60">
                 Service
-                <select className="rounded-2xl border border-[#E5E5E5] bg-white px-4 py-3 text-[#111111] outline-none transition-colors focus:border-[#111111]">
-                  <option>Web Design</option>
-                  <option>Shopify Development</option>
-                  <option>Mobile App</option>
-                  <option>Printing Services</option>
+                <select className="rounded-2xl border border-white/10 bg-[#111111] px-4 py-3 text-white outline-none transition-colors focus:border-white/20">
+                  <option className="bg-[#111111] text-white">Web Design</option>
+                  <option className="bg-[#111111] text-white">Shopify Development</option>
+                  <option className="bg-[#111111] text-white">Mobile App</option>
+                  <option className="bg-[#111111] text-white">Printing Services</option>
                 </select>
               </label>
 
-              <label className="grid gap-2 text-sm text-[#666666]">
+              <label className="grid gap-2 text-sm text-white/60">
                 Project Details
                 <textarea
                   rows={5}
                   placeholder="Tell us about your project..."
-                  className="rounded-2xl border border-[#E5E5E5] bg-white px-4 py-3 text-[#111111] outline-none transition-colors focus:border-[#111111]"
+                  className="rounded-2xl border border-white/10 bg-[#111111] px-4 py-3 text-white placeholder:text-white/40 outline-none transition-colors focus:border-white/20"
                 />
               </label>
 
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <div className="flex items-center gap-2 text-sm text-[#666666]">
+                <div className="flex items-center gap-2 text-sm text-white/60">
                   <MessageSquare className="h-4 w-4" />
                   Response within 1 working day
                 </div>
                 <button
                   type="button"
-                  className="inline-flex items-center justify-center rounded-full bg-[#111111] px-6 py-3 text-sm font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#111111] shadow-[0_8px_24px_rgba(255,255,255,0.12)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#f3f3f3] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#111111] active:translate-y-0"
                 >
                   Send Enquiry
                 </button>

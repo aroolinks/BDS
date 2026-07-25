@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Button from "@/components/ui/Button";
 
 const links = [
   { label: "Home", href: "/#top" },
@@ -13,15 +14,15 @@ const links = [
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-[#E5E5E5]/80 bg-white/75 backdrop-blur-xl">
+    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-[#111111]/95 backdrop-blur-xl">
       <div className="mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-5 md:px-8">
         <Link
-          href="/#top"
+          href="https://www.berkshiredigitalstudio.co.uk/"
           className="shrink-0"
           aria-label="Berkshire Digital Studio home"
         >
           <Image
-            src="/logo.png"
+            src="/logo-white.png"
             alt="Berkshire Digital Studio"
             width={1040}
             height={334}
@@ -35,19 +36,14 @@ export default function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-sm text-[#666666] transition-colors hover:text-[#111111]"
+              className="text-sm text-white/70 transition-colors hover:text-white"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        <Link
-          href="/#contact"
-          className="inline-flex items-center justify-center rounded-full bg-[#111111] px-5 py-3 text-sm font-medium text-white transition-transform duration-300 hover:-translate-y-0.5"
-        >
-          Get Started
-        </Link>
+        <Button href="/#contact">Get Started</Button>
       </div>
     </header>
   );

@@ -68,7 +68,7 @@ export default function PortfolioShowcase() {
   }, [activeFilter]);
 
   return (
-    <section className="py-20 md:py-24">
+    <section className="py-20 md:py-24 bg-[#111111] text-white">
       <Container>
         <SectionHeading
           eyebrow="Portfolio"
@@ -87,8 +87,8 @@ export default function PortfolioShowcase() {
                 onClick={() => setActiveFilter(option)}
                 className={`rounded-full border px-4 py-2 text-sm transition-all duration-300 ${
                   isActive
-                    ? "border-[#111111] bg-[#111111] text-white"
-                    : "border-[#E5E5E5] bg-white text-[#666666] hover:border-[#111111] hover:text-[#111111]"
+                    ? "border-white bg-white text-[#111111]"
+                    : "border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:text-white"
                 }`}
               >
                 {option}
@@ -109,7 +109,7 @@ export default function PortfolioShowcase() {
         </div>
 
         {filteredProjects.length === 0 && (
-          <div className="mt-8 rounded-[24px] border border-[#E5E5E5] bg-[#F8F8F8] p-6 text-sm text-[#666666]">
+          <div className="mt-8 rounded-[24px] border border-white/10 bg-white/5 p-6 text-sm text-white/60">
             No projects match this filter yet.
           </div>
         )}

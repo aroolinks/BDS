@@ -27,16 +27,16 @@ const printingServices = [
 
 export default function PrintingPage() {
   return (
-    <main className="pb-16 pt-28 md:pt-32">
+    <main className="pb-16 pt-28 md:pt-32 bg-[#111111] text-white">
       <Container>
         <div className="max-w-4xl">
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-[#666666]">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-white/50">
             Printing Services
           </p>
-          <h1 className="text-5xl font-semibold tracking-[-0.06em] text-[#111111] md:text-7xl">
+          <h1 className="text-5xl font-semibold tracking-[-0.06em] text-white md:text-7xl">
             Printed materials that leave a lasting impression.
           </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-[#666666]">
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-white/60">
             From premium business cards to high-visibility banners, we help brands turn ideas into tactile, polished print experiences.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -51,22 +51,22 @@ export default function PrintingPage() {
           {printingServices.map((service) => (
             <article
               key={service.title}
-              className="rounded-[28px] border border-[#E5E5E5] bg-white p-6 shadow-[0_12px_35px_rgba(17,17,17,0.04)]"
+              className="rounded-[28px] border border-white/10 bg-[#111111] p-6 shadow-[0_12px_35px_rgba(255,255,255,0.04)]"
             >
-              <span className="rounded-full bg-[#F8F8F8] px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-[#666666]">
+              <span className="rounded-full bg-white/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.25em] text-white/60">
                 Print Solution
               </span>
-              <h2 className="mt-4 text-2xl font-semibold text-[#111111]">
+              <h2 className="mt-4 text-2xl font-semibold text-white">
                 {service.title}
               </h2>
-              <p className="mt-3 text-sm leading-7 text-[#666666]">
+              <p className="mt-3 text-sm leading-7 text-white/60">
                 {service.description}
               </p>
             </article>
           ))}
         </div>
 
-        <div className="mt-14 rounded-[28px] border border-[#E5E5E5] bg-[#F8F8F8] p-6 md:p-8">
+        <div className="mt-14 rounded-[28px] border border-white/10 bg-[#111111] p-6 md:p-8">
           <SectionHeading
             eyebrow="Why print with us"
             title="Material quality, layout clarity, and efficient production."

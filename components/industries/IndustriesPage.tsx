@@ -136,10 +136,10 @@ const fadeUp = {
 export default function IndustriesPage() {
   return (
     <main className="overflow-hidden pt-24">
-      <section className="relative flex min-h-[62vh] items-center py-20 md:py-28">
+      <section className="relative flex min-h-[62vh] items-center py-20 md:py-28 bg-[#111111] text-white">
         <div className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="absolute -right-24 top-6 h-72 w-72 rounded-full bg-[#111111]/[0.06] blur-3xl md:h-[32rem] md:w-[32rem]" />
-          <div className="absolute bottom-0 left-[14%] h-44 w-44 rotate-45 rounded-[38px] border border-[#111111]/10 md:h-64 md:w-64" />
+          <div className="absolute -right-24 top-6 h-72 w-72 rounded-full bg-white/5 blur-3xl md:h-[32rem] md:w-[32rem]" />
+          <div className="absolute bottom-0 left-[14%] h-44 w-44 rotate-45 rounded-[38px] border border-white/10 md:h-64 md:w-64" />
         </div>
         <Container>
           <motion.div
@@ -149,11 +149,11 @@ export default function IndustriesPage() {
             transition={{ duration: 0.65, ease: "easeOut" }}
             className="max-w-4xl"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#666666]">Industries</p>
-            <h1 className="mt-5 text-5xl font-semibold tracking-[-0.065em] text-[#111111] md:text-7xl lg:text-8xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/50">Industries</p>
+            <h1 className="mt-5 text-5xl font-semibold tracking-[-0.065em] text-white md:text-7xl lg:text-8xl">
               Choose Your Industry
             </h1>
-            <p className="mt-7 max-w-3xl text-lg leading-8 text-[#666666] md:text-xl md:leading-9">
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-white/60 md:text-xl md:leading-9">
               Every industry has unique challenges, customer journeys and digital requirements. Explore tailored digital solutions, relevant case studies and proven strategies designed specifically for your business.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -164,7 +164,7 @@ export default function IndustriesPage() {
         </Container>
       </section>
 
-      <section id="industry-grid" className="border-y border-[#E5E5E5] bg-[#F8F8F8]" aria-labelledby="industries-heading">
+      <section id="industry-grid" className="border-y border-white/10 bg-[#111111]" aria-labelledby="industries-heading">
         <Container>
           <div className="py-20 md:py-28">
             <SectionHeading
@@ -212,11 +212,11 @@ export default function IndustriesPage() {
                     key={reason.title}
                     variants={fadeUp}
                     transition={{ duration: 0.5 }}
-                    className="rounded-[25px] border border-[#E5E5E5] bg-white p-6 shadow-[0_12px_36px_rgba(17,17,17,0.025)]"
+                    className="rounded-[25px] border border-white/10 bg-[#111111] p-6 shadow-[0_12px_36px_rgba(255,255,255,0.025)]"
                   >
-                    <Icon className="h-6 w-6 text-[#111111]" strokeWidth={1.6} />
-                    <h2 className="mt-7 text-xl font-semibold tracking-[-0.035em] text-[#111111]">{reason.title}</h2>
-                    <p className="mt-3 text-sm leading-6 text-[#666666]">{reason.text}</p>
+                    <Icon className="h-6 w-6 text-white" strokeWidth={1.6} />
+                    <h2 className="mt-7 text-xl font-semibold tracking-[-0.035em] text-white">{reason.title}</h2>
+                    <p className="mt-3 text-sm leading-6 text-white/60">{reason.text}</p>
                   </motion.article>
                 );
               })}
@@ -263,13 +263,13 @@ export default function IndustriesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.6 }}
-            className="rounded-[34px] bg-[#F8F8F8] px-6 py-12 text-center md:px-12 md:py-18"
+            className="rounded-[34px] bg-[#111111] border border-white/10 px-6 py-12 text-center md:px-12 md:py-18"
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#666666]">Your next chapter</p>
-            <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.055em] text-[#111111] md:text-6xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/50">Your next chapter</p>
+            <h2 className="mx-auto mt-4 max-w-3xl text-4xl font-semibold tracking-[-0.055em] text-white md:text-6xl">
               Ready to Grow Your Business?
             </h2>
-            <p className="mx-auto mt-5 max-w-2xl leading-7 text-[#666666]">
+            <p className="mx-auto mt-5 max-w-2xl leading-7 text-white/60">
               Let&apos;s create a digital experience that helps your business stand out, attract more customers and grow with confidence.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">

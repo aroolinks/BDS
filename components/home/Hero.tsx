@@ -15,19 +15,19 @@ export default function Hero() {
         <div className="absolute bottom-0 left-[10%] h-52 w-52 rotate-45 rounded-[42px] border border-[#111111]/10 md:h-72 md:w-72" />
       </div>
       <Container>
-        <div className="grid items-end gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        <div className="grid items-end gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 pt-10 md:pt-16 lg:pt-20">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, ease: "easeOut" }}
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#666666]">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
               Berkshire Digital Studio
             </p>
-            <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-[-0.07em] text-[#111111] md:text-7xl lg:text-8xl">
+            <h1 className="mt-5 max-w-4xl text-5xl font-semibold tracking-[-0.07em] text-white md:text-7xl lg:text-8xl">
               Digital work that gives ambitious businesses momentum.
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#666666] md:text-xl md:leading-9">
+            <p className="mt-7 max-w-2xl text-lg leading-8 text-white/70 md:text-xl md:leading-9">
               We create distinct brands, high-performing websites, and smarter digital systems that help you attract more customers and grow with confidence.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
